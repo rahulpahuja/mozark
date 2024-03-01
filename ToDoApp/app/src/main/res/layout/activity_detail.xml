@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".DetailActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable name="user" type="com.mozark.todoapp.model.Result"/>
+    </data>
+<RelativeLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:minWidth="120dp"
+        android:minHeight="120dp"
+        tools:src=""
+        android:layout_marginBottom="4dp"
+        android:id="@+id/iv_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+    <TextView
+        android:text="@{user.name.first}"
+        android:layout_marginTop="4dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        tools:text="User Name Goes here"
+        android:layout_below="@id/iv_users"
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="@{user.dob.age}"
+        android:layout_marginTop="4dp"
+        android:layout_alignStart="@id/tv_user_name"
+        android:textSize="16sp"
+        android:layout_below="@id/tv_user_name"
+        tools:text="User Birthdate Goes here"
+        android:id="@+id/tv_user_birthdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="@{user.location.city}"
+        android:layout_marginTop="4dp"
+        android:layout_alignStart="@id/tv_user_birthdate"
+        android:textSize="16sp"
+        android:layout_below="@id/tv_user_birthdate"
+        tools:text="User Location Goes here"
+        android:id="@+id/tv_user_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
+</layout>
